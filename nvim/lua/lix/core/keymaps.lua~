@@ -67,7 +67,7 @@ vim.keymap.set("n", "<leader>fp",
         vim.fn.setreg("+", filePath)
         print("File path copied to clipoard: " .. filePath)
     end,
-{desc = "close the current window" })
+{desc = "copy the current file's path to clipboard" })
 
 -- | my personals edit technicaly require full line selection with V 
 vim.keymap.set("v", "d", "d", { desc = "delete a line" })
