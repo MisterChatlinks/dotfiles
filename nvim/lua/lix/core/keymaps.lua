@@ -9,8 +9,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" }
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
 
 -- horizontal line mouvement
-vim.keymap.set("v", "<", "<gv", opts)
-vim.keymap.set("v", ">", ">gv", opts)
+vim.keymap.set("v", "<", "<gv", { desc = "Indent Left", silent = true, noremap = true })
+vim.keymap.set("v", ">", ">gv", { desc = "Indent Right",  silent = true, noremap = true })
+vim.keymap.set("v", ".", ">gv", { desc = "Indent Right (alternative)",  silent = true, noremap = true })
 
 -- join line with the previous
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and restore cursor" })
@@ -67,7 +68,7 @@ vim.keymap.set("n", "<leader>fp",
         vim.fn.setreg("+", filePath)
         print("File path copied to clipoard: " .. filePath)
     end,
-{desc = "copy the current file's path to clipboard" })
+{desc = "copy the current file's path to clipoard" })
 
 -- | my personals edit technicaly require full line selection with V 
 vim.keymap.set("v", "d", "d", { desc = "delete a line" })
