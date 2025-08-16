@@ -1,3 +1,6 @@
 {
-    "fd": "alternative to find required by snacks's explorer"
+    "fd": "alternative to find (required by snacks's explorer)",
+    "lolcat": "ascii coloration helper",
+    "figlet": "text to ascii art",
+    "lazygit": "tui like git manip, (required by plugin snacks)"
 }
