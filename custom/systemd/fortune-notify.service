@@ -1,0 +1,9 @@
+[Unit]
+Description=Send fortune notifications every 20 minutes
+
+[Service]
+ExecStart=/usr/bin/fish -c 'while true; sleep 1200; notify-send (fortune); end'
+Restart=always
+
+[Install]
+WantedBy=default.target
