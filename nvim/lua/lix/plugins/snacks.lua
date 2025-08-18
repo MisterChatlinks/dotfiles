@@ -179,5 +179,13 @@ return {
             { "<leader>th", function() require("snacks").picker.colorschemes({ layout = "ivy" }) end, desc = "Pick Colorschemes (Snack Picker)" },
             { "<leader>vh", function() require("snacks").picker.help() end, desc = "Help Pages" },
         },
+    },
+    {
+        "folke/todo-comments.nvim",
+        event = { "BufReadPre", "BufNewFile" },
+        keys = {
+            { "<leader>pt", function() require("snacks").picker.todo_comments() end, desc = "TODO" },
+            { "<leader>pT", function() require("snacks").picker.todo_comments({ "TODO", "FIX", "FIX ME" }) end, desc = "Todo/Fix/FixMe" }
+        }
     }
 }
